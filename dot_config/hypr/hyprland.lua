@@ -16,29 +16,13 @@
 -- You can (and should!!) split this configuration into multiple files
 -- Create your files separately and then require them like this:
 -- require("myColors")
+require("configs/monitors")
 
-
-------------------
----- MONITORS ----
-------------------
-
--- See https://wiki.hypr.land/Configuring/Basics/Monitors/
-hl.monitor({
-    output   = "",
-    mode     = "preferred",
-    position = "auto",
-    scale    = "auto",
-})
-
-
----------------------
----- MY PROGRAMS ----
----------------------
-
+local programs = require("configs/programs")
 -- Set programs that you use
-local terminal    = "kitty"
-local fileManager = "dolphin"
-local menu        = "hyprlauncher"
+local terminal    = programs.terminal
+local fileManager = programs.fileManager
+local menu        = programs.menu
 
 
 -------------------
